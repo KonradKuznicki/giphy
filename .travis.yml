@@ -4,6 +4,7 @@ node_js:
 before_script:
 - npm install -g bower gulp
 - bower install
+- echo -e "Host giphy.kuznicki.me\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 before_install:
 - openssl aes-256-cbc -K $encrypted_04c8809ecb9e_key -iv $encrypted_04c8809ecb9e_iv
   -in deploy.key.enc -out deploy.key -d
