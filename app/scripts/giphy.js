@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('giphy', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute'])
+angular
+  .module('giphy', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -10,5 +11,4 @@ angular.module('giphy', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource', 'ng
       .otherwise({
         redirectTo: '/'
       });
-  })
-;
+  });
