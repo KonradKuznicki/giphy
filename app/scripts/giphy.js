@@ -8,7 +8,7 @@ angular
         templateUrl: 'partials/main.html',
         controller: 'MainCtrl'
       })
-      .when('/details/:imgCode', {
+      .when('/details/:gifId', {
         templateUrl: 'partials/details.html',
         controller: 'DetailsCtrl'
       })

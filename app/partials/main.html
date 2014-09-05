@@ -12,7 +12,9 @@
   </ul>
 
   <div class="gifs">
-    <img ng-repeat="gif in gifs" src="{{gif}}" class="gif">
+    <a ng-repeat="gif in gifs" class="gif" ng-href="{{gif.href}}">
+      <img src="{{gif.url}}" />
+    </a>
   </div>
 
 </div>

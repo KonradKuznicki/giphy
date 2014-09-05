@@ -15,9 +15,17 @@ angular
       return tmp;
     }
 
+
+    function gifExtractor(img) {
+      return {
+        url: img.images.fixed_width_still.url,
+        href: '#/details/' + img.id
+      };
+    }
+
     function newGifs(resp) {
 
-      $scope.gifs = resp.data.map(function (img) { return img.images.fixed_width_still.url; });
+      $scope.gifs = resp.data.map(gifExtractor);
 
       $scope.pages = repeat(Math.ceil(resp.pagination.total_count / 25));
 
