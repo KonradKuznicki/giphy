@@ -16,9 +16,12 @@
     </div>
 
     <div class="gifs">
-      <a ng-repeat="gif in gifs" class="gif" ng-href="{{gif.href}}">
-        <img src="{{gif.url}}" />
-      </a>
+      <!-- span is added to make justify work -->
+      <span ng-repeat-start="gif in gifs"></span>
+        <a ng-href="{{gif.href}}" class="gif">
+          <img src="{{gif.url}}" />
+        </a>
+      <span ng-repeat-end></span>
     </div>
 
     <div class="pagination">
