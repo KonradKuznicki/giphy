@@ -1,5 +1,13 @@
 <div class="container">
 
-  {{text}}
+  <ul class="pagination">
+    <li ng-repeat="page in pages track by $index" class="page">
+      <a ng-href="#/show/cats/{{$index + 1}}">{{$index + 1}}</a>
+    </li>
+  </ul>
+
+  <div class="gifs">
+    <img ng-repeat="gif in gifs" src="{{gif}}" class="gif">
+  </div>
 
 </div>
