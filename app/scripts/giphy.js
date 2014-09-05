@@ -1,10 +1,18 @@
 'use strict';
 
+/**
+ * @ngdoc overview
+ * @name giphy
+ * @description
+ * # giphy
+ *
+ * giphy router, with 2 possible routes.
+ */
 angular
   .module('giphy', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/show/:search/:page?', {
+      .when('/show/:search/:page', {
         templateUrl: 'partials/main.html',
         controller: 'MainCtrl'
       })
@@ -13,6 +21,6 @@ angular
         controller: 'DetailsCtrl'
       })
       .otherwise({
-        redirectTo: '/show/cats'
+        redirectTo: '/show/cats/1'
       });
   });
