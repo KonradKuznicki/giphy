@@ -3,8 +3,8 @@
   <div class="heading">
     <h1 class="logo">Almost Giphy</h1>
     <div class="switch">
-      <a ng-href="#/show/cats/1" class="case selected">Cats</a>
-      <a ng-href="#/show/dogs/1" class="case">Dogs</a>
+      <a ng-href="#/show/cats/1" ng-class="{selected: search == 'cats'}" class="case">Cats</a>
+      <a ng-href="#/show/dogs/1" ng-class="{selected: search == 'dogs'}" class="case">Dogs</a>
     </div>
   </div>
 
