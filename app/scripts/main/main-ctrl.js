@@ -4,16 +4,12 @@ angular
   .module('giphy')
   .controller ('MainCtrl', function ($scope, $http, $routeParams) {
 
+    var page = $routeParams.page ? ($routeParams.page - 1) : 0;
+
+    $scope.search = $routeParams.search;
+
     $scope.gifs = [];
     $scope.pages = [];
-
-    function repeat(times, thing) {
-      var tmp = [];
-      for(var i = 0; i < times; i++) {
-        tmp.push(thing);
-      }
-      return tmp;
-    }
 
 
     function gifExtractor(img) {
@@ -27,15 +23,22 @@ angular
 
       $scope.gifs = resp.data.map(gifExtractor);
 
-      $scope.pages = repeat(Math.ceil(resp.pagination.total_count / 25));
+      $scope.pages = Math.ceil(resp.pagination.total_count / 25);
+
+      if(page > 0) {
+        $scope.newer = page;
+      }
+
+      if(page < $scope.pages) {
+        $scope.older = page + 1 + 1;
+      }
 
     }
 
-    var page = ($routeParams.page ? ($routeParams.page - 1) : 0) * 25;
 
     $http.get('http://api.giphy.com/v1/gifs/search?q='
-             + $routeParams.animal
-             + '&offset=' + page
+             + $routeParams.search
+             + '&offset=' + (page * 25)
              + '&limit=25'
              + '&sort=recent'
              + '&api_key=dc6zaTOxFJmzC')

@@ -4,7 +4,7 @@ angular
   .module('giphy', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/show/:animal/:page?', {
+      .when('/show/:search/:page?', {
         templateUrl: 'partials/main.html',
         controller: 'MainCtrl'
       })
