@@ -89,3 +89,4 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['html', 'partials', 'images', 'fonts']);
+gulp.task('testbuild', ['test', 'build']);
