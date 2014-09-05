@@ -1,24 +1,30 @@
 <div class="container">
 
-  <div class="switch">
-    <a ng-href="#/show/cats/1">Cats</a>
-    <a ng-href="#/show/dogs/1">Dogs</a>
+  <div class="heading">
+    <h1 class="logo">Almost Giphy</h1>
+    <div class="switch">
+      <a ng-href="#/show/cats/1" class="case selected">Cats</a>
+      <a ng-href="#/show/dogs/1" class="case">Dogs</a>
+    </div>
   </div>
 
-  <div class="pagination">
+
+  <div class="body">
+    <div class="pagination">
       <a ng-if="newer" ng-href="#/show/{{search}}/{{newer}}">newer</a>
       <a ng-if="older" ng-href="#/show/{{search}}/{{older}}">older</a>
-  </div>
+    </div>
 
-  <div class="gifs">
-    <a ng-repeat="gif in gifs" class="gif" ng-href="{{gif.href}}">
-      <img src="{{gif.url}}" />
-    </a>
-  </div>
+    <div class="gifs">
+      <a ng-repeat="gif in gifs" class="gif" ng-href="{{gif.href}}">
+        <img src="{{gif.url}}" />
+      </a>
+    </div>
 
-  <div class="pagination">
+    <div class="pagination">
       <a ng-if="newer" ng-href="#/show/{{search}}/{{newer}}">newer</a>
       <a ng-if="older" ng-href="#/show/{{search}}/{{older}}">older</a>
+    </div>
   </div>
 
 </div>
