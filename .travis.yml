@@ -10,5 +10,4 @@ before_install:
   -in deploy.key.enc -out deploy.key -d
 - chmod 600 deploy.key
 after_success:
-- gulp build
 - scp -i deploy.key -r dist/* travis@giphy.kuznicki.me:giphy
