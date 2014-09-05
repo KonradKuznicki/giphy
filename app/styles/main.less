@@ -24,49 +24,75 @@ body {
     float: right;
   }
 
-  .switch {
-    display: block;
-    a {
-      text-decoration: none;
-    }
+}
 
-    // border-radius: 3px;
-    // padding: 10px 7px;
-    // border: 1px solid silver;
 
-    .case {
-      font-family: Raleway;
-      border-radius: 3px;
-      padding: 5px 10px;
-      color: black;
-      font-size: 23px;
+.switch {
+  display: block;
+  a {
+    text-decoration: none;
+  }
 
-      &.selected {
-        background: #3498db;
-        color: white;
-        &:hover {
-          box-shadow: none;
-        }
-      }
+  .case {
+    font-family: Raleway;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: black;
+    font-size: 23px;
+
+    &.selected {
+      background: #3498db;
+      color: white;
       &:hover {
-        box-shadow: inset 2px 2px 0px 0px #195074;
+        box-shadow: none;
       }
     }
-
-    &:after {
-      clear: both;
-      display: block;
-      content: "";
+    &:hover {
+      box-shadow: inset 2px 2px 0px 0px #195074;
     }
+  }
+
+  &:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}
+
+.pagination {
+
+  margin: 10px auto;
+  max-width: 960px;
+  min-width: 360px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Raleway;
+    font-size: 23px;
+  }
+
+  .older {
+    float: right;
+  }
+
+  .newer {
+    float: left;
+  }
+
+  &:after {
+    clear: both;
+    display: block;
+    content: "";
   }
 
 }
 
 /* main */
 .gifs {
-
+  text-align: center;
   .gif {
-    float: left;
+    display: inline-block;
     padding: 7px;
     margin: 7px;
     background: white;

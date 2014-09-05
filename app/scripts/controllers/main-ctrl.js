@@ -30,7 +30,7 @@ angular
     // extract and prepare gif info for gif list
     function gifExtractor(img) {
       return {
-        url: img.images.fixed_width_still.url,
+        url: img.images.fixed_height_still.url,
         href: '#/details/' + img.id
       };
     }
