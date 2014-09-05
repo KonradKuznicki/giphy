@@ -4,8 +4,12 @@ body {
 }
 
 /* default */
+
+@color-main: #9ABBD1;
+@distace-main: 7px;
+
 .body {
-  background: #3498db;
+  background: @color-main;
   border: 1px solid transparent; // fix bottom white bar
 }
 
@@ -16,12 +20,12 @@ body {
     font-size: 2em;
     font-family: Raleway;
     font-weight: normal;
-    margin: 0 0 0 7px;
+    margin: 0 0 0 @distace-main;
     display: inline-block;
   }
 
   .switch {
-    margin: 5px 7px 0 0;
+    margin: 5px @distace-main 0 0;
     float: right;
   }
 
@@ -42,7 +46,7 @@ body {
     font-size: 23px;
 
     &.selected {
-      background: #3498db;
+      background: @color-main;
       color: white;
       &:hover {
         box-shadow: none;
@@ -74,7 +78,7 @@ body {
 
   .older {
     float: right;
-    margin-right: 7px;
+    margin-right: @distace-main;
     &:after {
       font-size: 28px;
       content: ">";
@@ -84,7 +88,7 @@ body {
 
   .newer {
     float: left;
-    margin-left: 7px;
+    margin-left: @distace-main;
     &:before {
       font-size: 28px;
       content: "<";
@@ -107,8 +111,8 @@ body {
 
     font-size: 0.1px; /*hide whitespace between elements*/
     display: inline-block;
-    padding: 7px;
-    margin: 7px;
+    padding: @distace-main;
+    margin: @distace-main;
     background: white;
     border-radius: 3px;
     img {
