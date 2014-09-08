@@ -29,8 +29,33 @@ body {
     float: right;
   }
 
+  .back {
+    margin: 0 @distace-main 0 0;
+    float: right;
+  }
+
 }
 
+.back {
+  display: block;
+  background: @color-main;
+  border-radius: 3px;
+  padding: 0 10px 3px 10px;
+
+  a& {
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: 23px;
+    color: white;
+  }
+
+  .icon {
+    font-family: Raleway;
+    font-size: 28px;
+    content: "<";
+    margin-right: 7px;
+  }
+}
 
 .switch {
   display: block;
