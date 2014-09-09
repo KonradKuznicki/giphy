@@ -3,14 +3,18 @@
   <div class="heading">
     <h1 class="logo">Almost Giphy</h1>
 
-    <a href="javascript:history.back();" class="back"><span class="icon">&lt;</span>back to list</a>
+    <a href="javascript:history.back();" class="back"><span class="icon">&lt;</span>back</a>
   </div>
 
   <div class="body">
-    <div class="">
-      gif source: <a ng-href="{{gif.source}}">{{gif.source}}</a><br />
-      giphy link:  <a ng-href="{{gif.url}}">{{gif.url}}</a><br />
-      <img src="{{gif.images.original.url}}" />
+    <div class="details">
+      <div class="gif">
+        <img src="{{gif.images.original.url}}" />
+      </div>
+      <div class="out-links">
+        <a ng-href="{{gif.url}}">giphy link</a>
+        <a ng-if="gif.source" ng-href="{{gif.source}}">gif source</a>
+      </div>
     </div>
   </div>
 </div>
